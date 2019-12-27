@@ -13,13 +13,13 @@ div {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
-  max-width: 850px;
+  max-width: 710px;
   margin: auto;
 }
 
 .calendar div {
-  min-width: $day-width;
-  min-height: $day-width;
+  min-width: $day-size;
+  min-height: $day-size;
   margin-right: 1px;
   margin-bottom: 1px;
   border: 1.5px solid $color-border;
@@ -57,6 +57,6 @@ div {
 @each $day in $weeek-day {
   $i: index($weeek-day, $day);
   .calendar-#{$day} > div:first-child {
-    margin-left: calc(#{$day-width} * #{$i} + #{$i}px - #{$day-width} - #{1}px);
+    margin-left: calc(#{$day-size} * #{$i} + #{$i}px - #{$day-size} - #{1}px);
   }
 }
